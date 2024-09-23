@@ -34,7 +34,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnUsuarios.setText("btnUsuarios");
+        btnUsuarios.setText("Usuarios");
         btnUsuarios.setActionCommand("Usuarios");
 
         btnEmpleados.setText("Empleados");

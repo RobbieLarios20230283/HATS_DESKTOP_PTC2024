@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Controlador;
 
 import Modelo.Usuario;
@@ -10,17 +6,13 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Admin
- */
 public class ctrlLogin implements MouseListener {
+    //1-Llamar a las otras capas
 
-    // 1-Llamar a las otras capas
     Usuario modelo;
     FrmLogin vista;
 
-    // 2-Constructor 
+    //2-Constructor 
     public ctrlLogin(Usuario Modelo, FrmLogin Vista) {
         this.modelo = Modelo;
         this.vista = Vista;
@@ -35,22 +27,23 @@ public class ctrlLogin implements MouseListener {
             modelo.setCorreo(vista.txtcorreo.getText());
             modelo.setContraseña(modelo.convertirSHA256(vista.txtcontraseña.getText()));
 
-            // Creo una variable llamada "comprobar" 
-            // que guardará el resultado de ejecutar el metodo iniciarSesion()            
+            //Creo una variable llamada "comprobar" 
+            //que guardará el resultado de ejecutar el metodo iniciarSesion()            
             boolean comprobar = modelo.iniciarSesion();
 
-            // Si la variable es "true" significa que sí existe el usuario ingresado    
-            if (comprobar) {
+            //Si la variable es "true" significa que si existe el usuario ingresado    
+            if (comprobar == true) {
                 JOptionPane.showMessageDialog(vista,"Usuario existe, ¡Bienvenido!");
             } else {
                 JOptionPane.showMessageDialog(vista, "Usuario no encontrado");
+
             }
         }
         
-        // Clic al botón de Ir Al Registro
+        //Clic al botón de Ir Al Registro
         if(e.getSource() == vista.btnirregis){
             Vista.FrmRegistro.initFrmRegistro();
-            vista.dispose();
+             vista.dispose();
         }
     }
 

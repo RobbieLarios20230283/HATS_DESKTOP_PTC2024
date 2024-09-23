@@ -65,11 +65,12 @@ public class Usuario {
         try {
             //Creamos el PreparedStatement que ejecutará la Query
             PreparedStatement addAdmin = conexion.prepareStatement("INSERT INTO credencialesAdmins(uuidAdmin, NombreCompleto, correoAdmin, ContraseñaUsuario) VALUES (?, ?, ?, ?)");
+            String contraseñaEncriptada = convertirSHA256(getContraseña());
             //Establecer valores de la consulta SQL
             addAdmin.setString(1, UUID.randomUUID().toString());
             addAdmin.setString(2, getNombre());
             addAdmin.setString(3, getCorreo());
-            addAdmin.setString(4, getContraseña());
+            addAdmin.setString(4, contraseñaEncriptada);
  
             //Ejecutar la consulta
             addAdmin.executeUpdate();

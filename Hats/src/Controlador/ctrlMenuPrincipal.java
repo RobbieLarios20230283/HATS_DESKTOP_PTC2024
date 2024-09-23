@@ -1,8 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package Controlador;
+package controlador;
 
 import Vista.FrmPrincipal;
 import Vista.PanelPantallaprincipal;
@@ -10,29 +6,29 @@ import Vista.panelEmpleados;
 import Vista.panelServicios;
 import Vista.panelUsuarios;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Admin
- */
-public class crtlMenuprincipal {
-    
- //1-Mandar a llamar a las demas capas
+
+//3- Heredar de la clase MouseListener
+public class ctrlMenuPrincipal implements MouseListener{
+   
+    //1-Mandar a llamar a las demas capas
     FrmPrincipal vista;
     PanelPantallaprincipal Panel;
     
     //2-Constructor
-    public crtlMenuprincipal(FrmPrincipal Vista, PanelPantallaprincipal panel){
+    public ctrlMenuPrincipal(FrmPrincipal Vista, PanelPantallaprincipal panel){
         this.vista = Vista;
         this.Panel = panel;
         
         vista.btnUsuarios.addMouseListener(this);
         vista.btnEmpleados.addMouseListener(this);
         vista.btnServicios.addMouseListener(this);
+        Panel.btnmensaje.addMouseListener(this);
     }
 
-
+    @Override
     public void mouseClicked(MouseEvent e) {
         
        
@@ -69,16 +65,17 @@ public class crtlMenuprincipal {
             
             vista.jpContenedor.revalidate();
             vista.jpContenedor.repaint();
-
+             //Aqui no me encuentra el btnMensaje
         }
         
-
+          if(e.getSource() == Panel.btnmensaje){
+            JOptionPane.showMessageDialog(Panel, "Hola");
+    
+        }
+        
         
     }
 
-
-    public crtlMenuprincipal() {
-    }
     @Override
     public void mousePressed(MouseEvent e) {
     }
