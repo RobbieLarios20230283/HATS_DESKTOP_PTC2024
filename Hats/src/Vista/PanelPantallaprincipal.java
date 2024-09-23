@@ -28,6 +28,8 @@ public class PanelPantallaprincipal extends javax.swing.JPanel {
 
         btnmensaje = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 51, 102));
+
         btnmensaje.setText("jButton1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

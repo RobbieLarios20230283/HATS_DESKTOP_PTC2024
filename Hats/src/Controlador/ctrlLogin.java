@@ -34,6 +34,8 @@ public class ctrlLogin implements MouseListener {
             //Si la variable es "true" significa que si existe el usuario ingresado    
             if (comprobar == true) {
                 JOptionPane.showMessageDialog(vista,"Usuario existe, ¡Bienvenido!");
+                Vista.FrmPrincipal.initfrmMenuPrincipal();
+                vista.dispose();
             } else {
                 JOptionPane.showMessageDialog(vista, "Usuario no encontrado");
 

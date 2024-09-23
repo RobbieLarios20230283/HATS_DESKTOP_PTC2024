@@ -91,8 +91,9 @@ public class Usuario {
             //Preparamos la consulta SQL para verificar el usuario
             String sql = "SELECT * FROM credencialesAdmins WHERE correoAdmin = ? AND ContraseñaUsuario = ?";
             PreparedStatement statement = conexion.prepareStatement(sql);
+            String contraseñaEncriptada = convertirSHA256(getContraseña());
             statement.setString(1, getCorreo());
-            statement.setString(2, getContraseña());
+            statement.setString(2, contraseñaEncriptada);
 
             //Ejecutamos la consulta
             ResultSet resultSet = statement.executeQuery();

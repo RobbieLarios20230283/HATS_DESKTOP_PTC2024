@@ -4,6 +4,10 @@
  */
 package Vista;
 
+import Controlador.ctrlLogin;
+import Modelo.Usuario;
+import controlador.ctrlMenuPrincipal;
+
 /**
  *
  * @author Admin
@@ -124,10 +128,20 @@ public class FrmPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmPrincipal().setVisible(true);
+            initfrmMenuPrincipal();
             }
         });
     }
+    
+    public static void initfrmMenuPrincipal(){
+        FrmPrincipal vista = new FrmPrincipal();
+        PanelPantallaprincipal panel = new PanelPantallaprincipal();
+        ctrlMenuPrincipal controlador = new ctrlMenuPrincipal(vista,panel);
+        
+        vista.setVisible(true);
+    } 
+        
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnEmpleados;
