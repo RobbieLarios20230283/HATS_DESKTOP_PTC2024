@@ -4,6 +4,7 @@ import Vista.FrmPrincipal;
 import Vista.panelEmpleados;
 import Vista.panelServicios;
 import Vista.panelUsuarios;
+import Vista.panelprincipal;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JOptionPane;
@@ -14,10 +15,10 @@ public class ctrlMenuPrincipal implements MouseListener{
    
     //1-Mandar a llamar a las demas capas
     FrmPrincipal vista;
-    panelEmpleados Panel;
+    panelprincipal Panel;
     
     //2-Constructor
-    public ctrlMenuPrincipal(FrmPrincipal Vista, panelEmpleados panel){
+    public ctrlMenuPrincipal(FrmPrincipal Vista, panelprincipal panel){
         this.vista = Vista;
         this.Panel = panel;
         

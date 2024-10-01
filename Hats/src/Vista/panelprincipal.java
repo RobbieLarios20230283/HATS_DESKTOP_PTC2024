@@ -10,14 +10,20 @@ import controlador.ctrlMenuPrincipal;
  *
  * @author Admin
  */
-public class panelEmpleados extends javax.swing.JPanel {
+public class panelprincipal extends javax.swing.JPanel {
 
     /**
-     * Creates new form panelEmpleados
+     * Creates new form panelprincipal
      */
-    public panelEmpleados() {
+    public panelprincipal() {
         initComponents();
-
+        
+                
+                
+        panelprincipal panel = this;
+        FrmPrincipal vista = new FrmPrincipal();
+        
+        ctrlMenuPrincipal controlador = new ctrlMenuPrincipal(vista, panel);
     }
 
     /**
@@ -29,7 +35,7 @@ public class panelEmpleados extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setBackground(new java.awt.Color(153, 255, 153));
+        setBackground(new java.awt.Color(255, 102, 102));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

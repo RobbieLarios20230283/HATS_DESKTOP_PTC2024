@@ -39,7 +39,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnUsuarios.setText("Usuarios");
-        btnUsuarios.setActionCommand("Usuarios");
 
         btnEmpleados.setText("Empleados");
 
@@ -69,16 +68,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 .addContainerGap(202, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jpContenedorLayout = new javax.swing.GroupLayout(jpContenedor);
-        jpContenedor.setLayout(jpContenedorLayout);
-        jpContenedorLayout.setHorizontalGroup(
-            jpContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 673, Short.MAX_VALUE)
-        );
-        jpContenedorLayout.setVerticalGroup(
-            jpContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
+        jpContenedor.setBackground(new java.awt.Color(204, 255, 255));
+        jpContenedor.setLayout(new java.awt.BorderLayout());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -135,8 +126,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
     
     public static void initfrmMenuPrincipal(){
         FrmPrincipal vista = new FrmPrincipal();
-        panelEmpleados panel = new panelEmpleados();
-        ctrlMenuPrincipal controlador = new ctrlMenuPrincipal(vista,panel);
+        panelprincipal panel = new panelprincipal();
+        ctrlMenuPrincipal controlador = new ctrlMenuPrincipal(vista, panel);
         
         vista.setVisible(true);
     } 
