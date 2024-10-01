@@ -4,6 +4,8 @@
  */
 package Vista;
 
+import controlador.ctrlMenuPrincipal;
+
 /**
  *
  * @author Admin
@@ -15,6 +17,7 @@ public class panelUsuarios extends javax.swing.JPanel {
      */
     public panelUsuarios() {
         initComponents();
+        
     }
 
     /**

@@ -4,6 +4,8 @@
  */
 package Vista;
 
+import controlador.ctrlMenuPrincipal;
+
 /**
  *
  * @author Admin
@@ -15,6 +17,12 @@ public class panelEmpleados extends javax.swing.JPanel {
      */
     public panelEmpleados() {
         initComponents();
+        
+                
+        panelEmpleados panel = this;
+        FrmPrincipal vista = new FrmPrincipal();
+        
+        ctrlMenuPrincipal controlador = new ctrlMenuPrincipal(vista, panel);
     }
 
     /**

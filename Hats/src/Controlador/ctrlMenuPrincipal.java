@@ -1,7 +1,6 @@
 package controlador;
 
 import Vista.FrmPrincipal;
-import Vista.PanelPantallaprincipal;
 import Vista.panelEmpleados;
 import Vista.panelServicios;
 import Vista.panelUsuarios;
@@ -15,17 +14,16 @@ public class ctrlMenuPrincipal implements MouseListener{
    
     //1-Mandar a llamar a las demas capas
     FrmPrincipal vista;
-    PanelPantallaprincipal Panel;
+    panelEmpleados Panel;
     
     //2-Constructor
-    public ctrlMenuPrincipal(FrmPrincipal Vista, PanelPantallaprincipal panel){
+    public ctrlMenuPrincipal(FrmPrincipal Vista, panelEmpleados panel){
         this.vista = Vista;
         this.Panel = panel;
         
         vista.btnUsuarios.addMouseListener(this);
         vista.btnEmpleados.addMouseListener(this);
         vista.btnServicios.addMouseListener(this);
-        Panel.btnmensaje.addMouseListener(this);
     }
 
     @Override
@@ -67,11 +65,7 @@ public class ctrlMenuPrincipal implements MouseListener{
             vista.jpContenedor.repaint();
              //Aqui no me encuentra el btnMensaje
         }
-        
-          if(e.getSource() == Panel.btnmensaje){
-            JOptionPane.showMessageDialog(Panel, "Hola");
-    
-        }
+
         
         
     }

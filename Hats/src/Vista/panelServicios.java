@@ -4,6 +4,8 @@
  */
 package Vista;
 
+import controlador.ctrlMenuPrincipal;
+
 /**
  *
  * @author Admin

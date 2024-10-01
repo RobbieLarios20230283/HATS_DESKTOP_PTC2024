@@ -135,7 +135,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
     
     public static void initfrmMenuPrincipal(){
         FrmPrincipal vista = new FrmPrincipal();
-        PanelPantallaprincipal panel = new PanelPantallaprincipal();
+        panelEmpleados panel = new panelEmpleados();
         ctrlMenuPrincipal controlador = new ctrlMenuPrincipal(vista,panel);
         
         vista.setVisible(true);
