@@ -33,6 +33,7 @@ public class ctrlMenuPrincipal implements MouseListener{
        
       
         if(e.getSource() == vista.btnUsuarios){
+            System.err.println("se dio clic al btnUsuarios");
             //1-Creo un objeto del panel que quiero mostrar
             panelUsuarios objUsuarios = new panelUsuarios();
             
