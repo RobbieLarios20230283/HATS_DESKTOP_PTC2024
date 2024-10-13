@@ -4,7 +4,9 @@
  */
 package Vista;
 
-import controlador.ctrlMenuPrincipal;
+import Controlador.ctrlEmpleados;
+import Modelo.Empleados;
+
 
 /**
  *
@@ -17,6 +19,11 @@ public class panelEmpleados extends javax.swing.JPanel {
      */
     public panelEmpleados() {
         initComponents();
+        
+        Empleados modelo = new Empleados();
+        panelEmpleados vista = this;
+        ctrlEmpleados Controlador = new ctrlEmpleados(modelo, vista);
+
 
     }
 
@@ -29,19 +36,136 @@ public class panelEmpleados extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        txtNombrePerfilEmp = new javax.swing.JTextField();
+        txtTelefonoEmp = new javax.swing.JTextField();
+        txtCorreoEmp = new javax.swing.JTextField();
+        txtfechanaEmp = new javax.swing.JTextField();
+        txtDireccionEmp = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtbEmpleados = new javax.swing.JTable();
+        btnActualizarEmp = new javax.swing.JButton();
+        btnEliminarEmp = new javax.swing.JButton();
+        btnLimiparEmp = new javax.swing.JButton();
+        txtNombreEmp = new javax.swing.JTextField();
+        txtDuiEmp = new javax.swing.JTextField();
+        txtContraseñaEmp = new javax.swing.JTextField();
+
+        txtNombrePerfilEmp.setText("jTextField1");
+
+        txtTelefonoEmp.setText("jTextField2");
+
+        txtCorreoEmp.setText("jTextField3");
+
+        txtfechanaEmp.setText("jTextField4");
+
+        txtDireccionEmp.setText("jTextField6");
+
+        jtbEmpleados.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jtbEmpleados);
+
+        btnActualizarEmp.setText("Actualizar");
+
+        btnEliminarEmp.setText("Eliminar");
+
+        btnLimiparEmp.setText("Limpiar");
+
+        txtNombreEmp.setText("jTextField1");
+
+        txtDuiEmp.setText("jTextField1");
+
+        txtContraseñaEmp.setText("jTextField2");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jScrollPane1)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtNombreEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTelefonoEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtCorreoEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtContraseñaEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(txtNombrePerfilEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtfechanaEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtDireccionEmp, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+                            .addComponent(txtDuiEmp)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(294, 294, 294)
+                        .addComponent(btnActualizarEmp)
+                        .addGap(66, 66, 66)
+                        .addComponent(btnEliminarEmp)
+                        .addGap(59, 59, 59)
+                        .addComponent(btnLimiparEmp)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtNombreEmp)
+                        .addComponent(txtCorreoEmp))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtContraseñaEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtDireccionEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtNombrePerfilEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTelefonoEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtDuiEmp)
+                            .addComponent(txtfechanaEmp, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE))))
+                .addGap(114, 114, 114)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnActualizarEmp)
+                    .addComponent(btnEliminarEmp)
+                    .addComponent(btnLimiparEmp))
+                .addGap(33, 33, 33)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnActualizarEmp;
+    public javax.swing.JButton btnEliminarEmp;
+    public javax.swing.JButton btnLimiparEmp;
+    private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JTable jtbEmpleados;
+    public javax.swing.JTextField txtContraseñaEmp;
+    public javax.swing.JTextField txtCorreoEmp;
+    public javax.swing.JTextField txtDireccionEmp;
+    public javax.swing.JTextField txtDuiEmp;
+    public javax.swing.JTextField txtNombreEmp;
+    public javax.swing.JTextField txtNombrePerfilEmp;
+    public javax.swing.JTextField txtTelefonoEmp;
+    public javax.swing.JTextField txtfechanaEmp;
     // End of variables declaration//GEN-END:variables
 }
