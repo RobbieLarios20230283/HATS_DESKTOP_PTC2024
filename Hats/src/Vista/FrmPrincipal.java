@@ -35,61 +35,70 @@ public class FrmPrincipal extends javax.swing.JFrame {
         btnUsuarios = new javax.swing.JButton();
         btnEmpleados = new javax.swing.JButton();
         btnServicios = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jpContenedor = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(212, 244, 235));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jpMenu.setBackground(new java.awt.Color(188, 234, 213));
+        jpMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnUsuarios.setBackground(new java.awt.Color(188, 234, 213));
+        btnUsuarios.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnUsuarios.setText("Usuarios");
+        jpMenu.add(btnUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 130, 50));
 
+        btnEmpleados.setBackground(new java.awt.Color(188, 234, 213));
+        btnEmpleados.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnEmpleados.setText("Empleados");
+        jpMenu.add(btnEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, 130, 50));
 
+        btnServicios.setBackground(new java.awt.Color(188, 234, 213));
+        btnServicios.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnServicios.setText("Servicios");
+        jpMenu.add(btnServicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 130, 50));
 
-        javax.swing.GroupLayout jpMenuLayout = new javax.swing.GroupLayout(jpMenu);
-        jpMenu.setLayout(jpMenuLayout);
-        jpMenuLayout.setHorizontalGroup(
-            jpMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpMenuLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(jpMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnServicios)
-                    .addComponent(btnEmpleados)
-                    .addComponent(btnUsuarios))
-                .addContainerGap(48, Short.MAX_VALUE))
-        );
-        jpMenuLayout.setVerticalGroup(
-            jpMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpMenuLayout.createSequentialGroup()
-                .addGap(186, 186, 186)
-                .addComponent(btnUsuarios)
-                .addGap(74, 74, 74)
-                .addComponent(btnEmpleados)
-                .addGap(57, 57, 57)
-                .addComponent(btnServicios)
-                .addContainerGap(202, Short.MAX_VALUE))
-        );
+        jButton1.setBackground(new java.awt.Color(188, 234, 213));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
+        jButton1.setText("Cerrar sesion");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jpMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 540, 130, 50));
+
+        getContentPane().add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 588));
 
         jpContenedor.setBackground(new java.awt.Color(204, 255, 255));
         jpContenedor.setLayout(new java.awt.BorderLayout());
+        getContentPane().add(jpContenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 0, -1, 588));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jpMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jpContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(636, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jpContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        jPanel1.setBackground(new java.awt.Color(212, 244, 235));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setText("Bienvenido a HATS");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, 250, 70));
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\angel\\Downloads\\HATS_LOGO.png")); // NOI18N
+        jLabel2.setText("jLabel2");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 280, 270));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 690, 590));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -140,6 +149,10 @@ public class FrmPrincipal extends javax.swing.JFrame {
     public javax.swing.JButton btnEmpleados;
     public javax.swing.JButton btnServicios;
     public javax.swing.JButton btnUsuarios;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     public javax.swing.JPanel jpContenedor;
     public javax.swing.JPanel jpMenu;
     // End of variables declaration//GEN-END:variables

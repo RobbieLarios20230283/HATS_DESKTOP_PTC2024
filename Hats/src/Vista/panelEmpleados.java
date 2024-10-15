@@ -50,15 +50,39 @@ public class panelEmpleados extends javax.swing.JPanel {
         txtDuiEmp = new javax.swing.JTextField();
         txtContraseñaEmp = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(212, 244, 235));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         txtNombrePerfilEmp.setText("jTextField1");
+        txtNombrePerfilEmp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        txtNombrePerfilEmp.setMinimumSize(new java.awt.Dimension(71, 22));
+        txtNombrePerfilEmp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombrePerfilEmpActionPerformed(evt);
+            }
+        });
+        add(txtNombrePerfilEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, 224, 42));
 
         txtTelefonoEmp.setText("jTextField2");
+        txtTelefonoEmp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        txtTelefonoEmp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTelefonoEmpActionPerformed(evt);
+            }
+        });
+        add(txtTelefonoEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 220, 40));
 
         txtCorreoEmp.setText("jTextField3");
+        txtCorreoEmp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        add(txtCorreoEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, 220, 40));
 
         txtfechanaEmp.setText("jTextField4");
+        txtfechanaEmp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        add(txtfechanaEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, 224, 42));
 
         txtDireccionEmp.setText("jTextField6");
+        txtDireccionEmp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        add(txtDireccionEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 50, 224, 42));
 
         jtbEmpleados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -73,84 +97,45 @@ public class panelEmpleados extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jtbEmpleados);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 309, 971, 373));
+
+        btnActualizarEmp.setBackground(new java.awt.Color(188, 234, 213));
+        btnActualizarEmp.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnActualizarEmp.setText("Actualizar");
+        add(btnActualizarEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 240, 110, 40));
 
+        btnEliminarEmp.setBackground(new java.awt.Color(188, 234, 213));
+        btnEliminarEmp.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnEliminarEmp.setText("Eliminar");
+        btnEliminarEmp.setPreferredSize(new java.awt.Dimension(89, 27));
+        add(btnEliminarEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 110, 40));
 
+        btnLimiparEmp.setBackground(new java.awt.Color(188, 234, 213));
+        btnLimiparEmp.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnLimiparEmp.setText("Limpiar");
+        btnLimiparEmp.setPreferredSize(new java.awt.Dimension(89, 27));
+        add(btnLimiparEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, 110, 40));
 
         txtNombreEmp.setText("jTextField1");
+        txtNombreEmp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        add(txtNombreEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 220, 40));
 
         txtDuiEmp.setText("jTextField1");
+        txtDuiEmp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        add(txtDuiEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 110, 224, 42));
 
         txtContraseñaEmp.setText("jTextField2");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtNombreEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtTelefonoEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(txtCorreoEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtContraseñaEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(txtNombrePerfilEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtfechanaEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtDireccionEmp, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
-                            .addComponent(txtDuiEmp)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(294, 294, 294)
-                        .addComponent(btnActualizarEmp)
-                        .addGap(66, 66, 66)
-                        .addComponent(btnEliminarEmp)
-                        .addGap(59, 59, 59)
-                        .addComponent(btnLimiparEmp)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtNombreEmp)
-                        .addComponent(txtCorreoEmp))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtContraseñaEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtDireccionEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtNombrePerfilEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtTelefonoEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtDuiEmp)
-                            .addComponent(txtfechanaEmp, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE))))
-                .addGap(114, 114, 114)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnActualizarEmp)
-                    .addComponent(btnEliminarEmp)
-                    .addComponent(btnLimiparEmp))
-                .addGap(33, 33, 33)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        txtContraseñaEmp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        add(txtContraseñaEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 50, 224, 40));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtNombrePerfilEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombrePerfilEmpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombrePerfilEmpActionPerformed
+
+    private void txtTelefonoEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefonoEmpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTelefonoEmpActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
