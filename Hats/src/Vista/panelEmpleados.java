@@ -51,38 +51,45 @@ public class panelEmpleados extends javax.swing.JPanel {
         txtContraseñaEmp = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(212, 244, 235));
+        setMaximumSize(new java.awt.Dimension(970, 684));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtNombrePerfilEmp.setText("jTextField1");
+        txtNombrePerfilEmp.setText("Usuario");
         txtNombrePerfilEmp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        txtNombrePerfilEmp.setMinimumSize(new java.awt.Dimension(71, 22));
+        txtNombrePerfilEmp.setMinimumSize(new java.awt.Dimension(0, 0));
         txtNombrePerfilEmp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNombrePerfilEmpActionPerformed(evt);
             }
         });
-        add(txtNombrePerfilEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, 224, 42));
+        add(txtNombrePerfilEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 110, 224, 42));
 
-        txtTelefonoEmp.setText("jTextField2");
+        txtTelefonoEmp.setText("Telefono");
         txtTelefonoEmp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         txtTelefonoEmp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTelefonoEmpActionPerformed(evt);
             }
         });
-        add(txtTelefonoEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 220, 40));
+        add(txtTelefonoEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 220, 40));
 
-        txtCorreoEmp.setText("jTextField3");
+        txtCorreoEmp.setText("Correo");
         txtCorreoEmp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        add(txtCorreoEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, 220, 40));
+        txtCorreoEmp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCorreoEmpActionPerformed(evt);
+            }
+        });
+        add(txtCorreoEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 220, 40));
 
-        txtfechanaEmp.setText("jTextField4");
+        txtfechanaEmp.setText("Fecha de nacimiento");
         txtfechanaEmp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        add(txtfechanaEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, 224, 42));
+        add(txtfechanaEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 110, 224, 42));
 
-        txtDireccionEmp.setText("jTextField6");
+        txtDireccionEmp.setText("Direccion");
         txtDireccionEmp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        add(txtDireccionEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 50, 224, 42));
+        txtDireccionEmp.setMinimumSize(new java.awt.Dimension(0, 0));
+        add(txtDireccionEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, 224, 42));
 
         jtbEmpleados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -97,7 +104,7 @@ public class panelEmpleados extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jtbEmpleados);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 309, 971, 373));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 309, 850, 373));
 
         btnActualizarEmp.setBackground(new java.awt.Color(188, 234, 213));
         btnActualizarEmp.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -116,17 +123,17 @@ public class panelEmpleados extends javax.swing.JPanel {
         btnLimiparEmp.setPreferredSize(new java.awt.Dimension(89, 27));
         add(btnLimiparEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, 110, 40));
 
-        txtNombreEmp.setText("jTextField1");
+        txtNombreEmp.setText("Nombre");
         txtNombreEmp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        add(txtNombreEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 220, 40));
+        add(txtNombreEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 220, 40));
 
-        txtDuiEmp.setText("jTextField1");
+        txtDuiEmp.setText("Dui");
         txtDuiEmp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        add(txtDuiEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 110, 224, 42));
+        add(txtDuiEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 224, 42));
 
-        txtContraseñaEmp.setText("jTextField2");
+        txtContraseñaEmp.setText("Contraseña");
         txtContraseñaEmp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        add(txtContraseñaEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 50, 224, 40));
+        add(txtContraseñaEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 60, 224, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtNombrePerfilEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombrePerfilEmpActionPerformed
@@ -136,6 +143,10 @@ public class panelEmpleados extends javax.swing.JPanel {
     private void txtTelefonoEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefonoEmpActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTelefonoEmpActionPerformed
+
+    private void txtCorreoEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCorreoEmpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCorreoEmpActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

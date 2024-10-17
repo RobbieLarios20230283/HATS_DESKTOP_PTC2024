@@ -34,7 +34,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jpMenu = new javax.swing.JPanel();
         btnUsuarios = new javax.swing.JButton();
         btnEmpleados = new javax.swing.JButton();
-        btnServicios = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jpContenedor = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
@@ -43,6 +42,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(212, 244, 235));
+        setMaximumSize(new java.awt.Dimension(970, 684));
+        setMinimumSize(new java.awt.Dimension(970, 684));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jpMenu.setBackground(new java.awt.Color(188, 234, 213));
@@ -58,11 +59,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
         btnEmpleados.setText("Empleados");
         jpMenu.add(btnEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, 130, 50));
 
-        btnServicios.setBackground(new java.awt.Color(188, 234, 213));
-        btnServicios.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        btnServicios.setText("Servicios");
-        jpMenu.add(btnServicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 130, 50));
-
         jButton1.setBackground(new java.awt.Color(188, 234, 213));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         jButton1.setText("Cerrar sesion");
@@ -71,27 +67,51 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jpMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 540, 130, 50));
+        jpMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 600, 130, 50));
 
-        getContentPane().add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 588));
+        getContentPane().add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 650));
 
         jpContenedor.setBackground(new java.awt.Color(204, 255, 255));
         jpContenedor.setLayout(new java.awt.BorderLayout());
         getContentPane().add(jpContenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 0, -1, 588));
 
         jPanel1.setBackground(new java.awt.Color(212, 244, 235));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setMaximumSize(new java.awt.Dimension(970, 684));
+        jPanel1.setMinimumSize(new java.awt.Dimension(970, 684));
+        jPanel1.setName(""); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("Bienvenido a HATS");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, 250, 70));
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\angel\\Downloads\\HATS_LOGO.png")); // NOI18N
         jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 280, 270));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 690, 590));
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(376, 376, 376)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(335, 335, 335)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 820, 650));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -147,7 +167,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnEmpleados;
-    public javax.swing.JButton btnServicios;
     public javax.swing.JButton btnUsuarios;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;

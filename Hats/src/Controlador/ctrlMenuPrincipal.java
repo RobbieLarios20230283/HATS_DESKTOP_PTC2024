@@ -2,7 +2,6 @@ package controlador;
 
 import Vista.FrmPrincipal;
 import Vista.panelEmpleados;
-import Vista.panelServicios;
 import Vista.panelUsuarios;
 import Vista.panelprincipal;
 import java.awt.event.MouseEvent;
@@ -24,7 +23,7 @@ public class ctrlMenuPrincipal implements MouseListener{
         
         vista.btnUsuarios.addMouseListener(this);
         vista.btnEmpleados.addMouseListener(this);
-        vista.btnServicios.addMouseListener(this);
+
     }
 
     @Override
@@ -57,16 +56,7 @@ public class ctrlMenuPrincipal implements MouseListener{
             vista.jpContenedor.repaint();
         }
         
-        if(e.getSource() == vista.btnServicios){
-            panelServicios objServicios = new panelServicios();
-            
-            vista.jpContenedor.removeAll();
-            vista.jpContenedor.add(objServicios);
-            
-            vista.jpContenedor.revalidate();
-            vista.jpContenedor.repaint();
-             //Aqui no me encuentra el btnMensaje
-        }
+  
 
         
         
